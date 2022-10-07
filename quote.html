@@ -1,0 +1,57 @@
+<script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+
+
+<style>
+	* {
+	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	}
+	.quote {
+		width: max-content;
+	}
+	.quote figcaption {
+		text-align: right;
+	}
+</style>
+
+<div class="quote">
+  <blockquote><cite><q></q></cite></blockquote>
+  <figcaption><small id="author"></small></figcaption>
+</div>
+
+<script>
+	quote = document.querySelector("body").childNodes[2]
+	document.querySelector("q").innerHTML = quote.textContent.trim()
+	quote.remove()
+	author_a = document.querySelector('a')
+	author = author_a.text
+	author_a.remove()
+
+	author_p = document.querySelector('#author')
+	author_p.innerHTML = "&mdash; " + author
+	
+	document.querySelectorAll('br').forEach(br => br.remove())
+	
+</script>
+
+<script type="text/javascript" charset="utf-8">
+/* From apption.co*/
+    (function() {
+      function getInitialColorMode() {
+        const mql = window.matchMedia('(prefers-color-scheme: dark)');
+        const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+        if (hasMediaQueryPreference) {
+          return mql.matches ? 'dark' : 'light';
+        }
+        return 'light';
+      }
+      if ('default' === 'default') {
+        if (getInitialColorMode() === 'light') {
+          document.body.style.background = "white";
+        } else {
+          document.body.style.background = "rgb(25, 25, 25)";
+        }
+      } else {
+        document.body.style.background = "transparent";
+      }
+    })()
+  </script>
